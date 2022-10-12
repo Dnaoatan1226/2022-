@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 FILE *fp = NULL;
-string itos(int i)//½«ÕûĞÎ×ªÎª×Ö·û´® 
+string itos(int i)//å°†æ•´å½¢è½¬ä¸ºå­—ç¬¦ä¸² 
 {
 	stringstream s;
 	s<<i;
@@ -21,14 +21,14 @@ class Course
 	map <int,int> oftenTruancy;
 };
 Course course[5];
-void writeData(int i,int flag)//½«Êı¾İÉú³ÉxslºÍtxtÎÄ¼ş 
+void writeData(int i,int flag)//å°†æ•°æ®ç”Ÿæˆxslå’Œtxtæ–‡ä»¶ 
 {
 	if(flag==1)
 	{
-		fprintf(fp,"%s\t%s","Ñ§ºÅ","¼¨µã");
+		fprintf(fp,"%s\t%s","å­¦å·","ç»©ç‚¹");
 		for(int j=1;j<21;j++)
 		{
-			fprintf(fp,"\t%s",("µÚ"+itos(j)+"½Ú").c_str());
+			fprintf(fp,"\t%s",("ç¬¬"+itos(j)+"èŠ‚").c_str());
 		} 
 		fprintf(fp,"\n");
 	}
@@ -63,7 +63,7 @@ int main()
 			else  course[i].student[j].studentNum="032002"+itos(i+1)+itos(j);
 		}
 		int truancyCount=5+rand()%4;
-		for(int j=0;j<truancyCount;)// 5-8Î»¹Ì¶¨¾­³£Ã»À´µÄÑ§Éú 
+		for(int j=0;j<truancyCount;)// 5-8ä½å›ºå®šç»å¸¸æ²¡æ¥çš„å­¦ç”Ÿ 
 		{
 			int tNum;
 			tNum=1+rand()%90;
@@ -71,7 +71,7 @@ int main()
 			{
 				numRepeat1[i][tNum]=1;
 				course[i].oftenTruancy[tNum]=1;
-				for(int k=0;k<16;)// È±ÁËÄÄ16´Î¿Î
+				for(int k=0;k<16;)// ç¼ºäº†å“ª16æ¬¡è¯¾
 				{
 					int t;
 					t=1+rand()%20;
@@ -85,7 +85,7 @@ int main()
 				j++;
 			}
 		}
-		for(int j=1;j<21;j++)//Ã¿ÃÅ¿Î³ÌµÄÃ¿´Î¿Î»¹ÓĞ0-3Î»Í¬Ñ§Ã»À´ 
+		for(int j=1;j<21;j++)//æ¯é—¨è¯¾ç¨‹çš„æ¯æ¬¡è¯¾è¿˜æœ‰0-3ä½åŒå­¦æ²¡æ¥ 
 		{
 			for(int k=0;k<(0+rand()%4);k++)
 			{
@@ -102,24 +102,24 @@ int main()
 			}
 		}
 	}
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì1.xls","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹1.xls","w+");//è¾“å…¥æƒ³è¦æ–‡ä»¶ç”Ÿæˆçš„ä½ç½®ï¼Œä¾‹ï¼šC:\\Users\\81980\\Desktop\\è½¯å·¥\\è¯¾ç¨‹1.xls
 	writeData(0,1);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì2.xls","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹2.xls","w+");
 	writeData(1,1);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì3.xls","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹3.xls","w+");
 	writeData(2,1);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì4.xls","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹4.xls","w+");
 	writeData(3,1);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì5.xls","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹5.xls","w+");
 	writeData(4,1);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì1.txt","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹1.txt","w+");
 	writeData(0,0);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì2.txt","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹2.txt","w+");
 	writeData(1,0);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì3.txt","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹3.txt","w+");
 	writeData(2,0);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì4.txt","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹4.txt","w+");
 	writeData(3,0);
-	fp = fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì5.txt","w+");
+	fp = fopen("filepath\\è¯¾ç¨‹5.txt","w+");
 	writeData(4,0);
 }
