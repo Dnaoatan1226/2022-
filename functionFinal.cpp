@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-string itos(int i)//½«ÕûÐÎ×ªÎª×Ö·û´® 
+string itos(int i)//å°†æ•´å½¢è½¬ä¸ºå­—ç¬¦ä¸² 
 {
 	stringstream s;
 	s<<i;
@@ -23,7 +23,7 @@ class Course
 };
 FILE *fp;
 Course course[5];
-void Course::readIn()//¶ÁÈ¡¿Î³ÌÊý¾Ý 
+void Course::readIn()//è¯»å–è¯¾ç¨‹æ•°æ® 
 {
 	for(int j=1;j<91;j++)
 	{
@@ -35,12 +35,12 @@ void Course::readIn()//¶ÁÈ¡¿Î³ÌÊý¾Ý
 		}
 	}
 }
-void Course::writeCall()//Êä³öµãÃû·½°¸µÄ.xlsÎÄ¼þ 
+void Course::writeCall()//è¾“å‡ºç‚¹åæ–¹æ¡ˆçš„.xlsæ–‡ä»¶ 
 {
-	fprintf(fp,"%s\t%s","Ñ§ºÅ","¼¨µã");
+	fprintf(fp,"%s\t%s","å­¦å·","ç»©ç‚¹");
 	for(int j=1;j<21;j++)
 	{
-		fprintf(fp,"\t%s",("µÚ"+itos(j)+"½Ú").c_str());
+		fprintf(fp,"\t%s",("ç¬¬"+itos(j)+"èŠ‚").c_str());
 	} 
 	fprintf(fp,"\n");
 	for(int j=1;j<91;j++)
@@ -111,25 +111,25 @@ double getE()
 }
 int main()
 {
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì1.txt","r+");
+	fp=fopen("filepath","r+");//å°†filepathæ›¿æ¢ä¸ºè¾“å…¥è¯»å…¥çš„æ–‡ä»¶æ‰€åœ¨çš„ä½ç½®ï¼ŒåŽç¼€ä¸ºtxtï¼Œä¾‹ï¼šC:\\Users\\81980\\Desktop\\è½¯å·¥\\è¯¾ç¨‹1.txt
 	course[0].readIn();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì2.txt","r+");
+	fp=fopen("filepath","r+");
 	course[1].readIn();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì3.txt","r+");
+	fp=fopen("filepath","r+");
 	course[2].readIn();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì4.txt","r+");
+	fp=fopen("filepath","r+");
 	course[3].readIn();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\¿Î³Ì5.txt","r+");
+	fp=fopen("filepatht","r+");
 	course[4].readIn();
 	cout<<getE();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\callTheRoll_Course1.xls","w+");
+	fp=fopen("filepath","w+");//å°†filepathæ›¿æ¢ä¸ºæƒ³è¦æ–‡ä»¶ä¿å­˜çš„ä½ç½®ï¼Œä¾‹ï¼šC:\\Users\\81980\\Desktop\\è½¯å·¥\\callTheRoll_Course1.xls
 	course[0].writeCall();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\callTheRoll_Course2.xls","w+");
+	fp=fopen("filepath","w+");
 	course[1].writeCall();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\callTheRoll_Course3.xls","w+");
+	fp=fopen("filepath","w+");
 	course[2].writeCall();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\callTheRoll_Course4.xls","w+");
+	fp=fopen("filepath","w+");
 	course[3].writeCall();
-	fp=fopen("C:\\Users\\81980\\Desktop\\Èí¹¤\\callTheRoll_Course5.xls","w+");
+	fp=fopen("filepath","w+");
 	course[4].writeCall();
 }
