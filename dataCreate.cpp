@@ -102,24 +102,24 @@ int main()
 			}
 		}
 	}
-	fp = fopen("filepath\\课程1.xls","w+");//输入想要文件生成的位置，例：C:\\Users\\81980\\Desktop\\软工\\课程1.xls
+	fp = fopen("filepath","w+");//将filepath替换为想要文件保存的位置，例：C:\\Users\\81980\\Desktop\\软工\\课程1.xls
 	writeData(0,1);
-	fp = fopen("filepath\\课程2.xls","w+");
+	fp = fopen("filepath","w+");
 	writeData(1,1);
-	fp = fopen("filepath\\课程3.xls","w+");
+	fp = fopen("filepath","w+");
 	writeData(2,1);
-	fp = fopen("filepath\\课程4.xls","w+");
+	fp = fopen("filepath","w+");
 	writeData(3,1);
-	fp = fopen("filepath\\课程5.xls","w+");
+	fp = fopen("filepath","w+");
 	writeData(4,1);
-	fp = fopen("filepath\\课程1.txt","w+");
+	fp = fopen("filepath","w+");
 	writeData(0,0);
-	fp = fopen("filepath\\课程2.txt","w+");
+	fp = fopen("filepath","w+");
 	writeData(1,0);
-	fp = fopen("filepath\\课程3.txt","w+");
+	fp = fopen("filepath","w+");
 	writeData(2,0);
-	fp = fopen("filepath\\课程4.txt","w+");
+	fp = fopen("filepath","w+");
 	writeData(3,0);
-	fp = fopen("filepath\\课程5.txt","w+");
+	fp = fopen("filepath","w+");
 	writeData(4,0);
 }
